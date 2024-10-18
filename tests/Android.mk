@@ -10,7 +10,9 @@ LOCAL_PACKAGE_NAME := AudioFXTests
 LOCAL_INSTRUMENTATION_FOR := AudioFX
 
 LOCAL_STATIC_ANDROID_LIBRARIES := \
-    androidx.core_core
+    androidx.core_core \
+    androidx.test.ext.junit \
+    androidx.test.rules
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
         audiofx-android-support-test

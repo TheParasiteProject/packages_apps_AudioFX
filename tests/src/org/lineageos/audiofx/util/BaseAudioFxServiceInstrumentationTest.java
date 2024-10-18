@@ -5,9 +5,9 @@ import android.content.Intent;
 import android.media.audiofx.AudioEffect;
 import android.os.IBinder;
 
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.rule.ServiceTestRule;
-import androidx.test.runner.AndroidJUnit4;
 
 import org.lineageos.audiofx.service.AudioFxService;
 
@@ -43,7 +43,7 @@ public abstract class BaseAudioFxServiceInstrumentationTest {
          */
         IBinder binder;
         while((binder = mServiceRule.bindService(
-                new Intent(InstrumentationRegistry.getTargetContext(),
+                new Intent(InstrumentationRegistry.getInstrumentation().getTargetContext(),
                         AudioFxService.class))) == null && it < MAX_ITERATION){
             it++;
         }
@@ -52,11 +52,11 @@ public abstract class BaseAudioFxServiceInstrumentationTest {
     }
 
     protected final Context getContext() {
-        return InstrumentationRegistry.getContext();
+        return InstrumentationRegistry.getInstrumentation().getContext();
     }
 
     protected final Context getTargetContext() {
-        return InstrumentationRegistry.getTargetContext();
+        return InstrumentationRegistry.getInstrumentation().getTargetContext();
     }
 
 }

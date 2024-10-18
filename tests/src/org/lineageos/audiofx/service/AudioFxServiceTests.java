@@ -2,11 +2,11 @@ package org.lineageos.audiofx.service;
 
 import android.content.Intent;
 import android.media.audiofx.AudioEffect;
-import android.test.suitebuilder.annotation.LargeTest;
 import android.util.Log;
 
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.filters.LargeTest;
 import androidx.test.platform.app.InstrumentationRegistry;
-import androidx.test.runner.AndroidJUnit4;
 
 import org.lineageos.audiofx.util.BaseAudioFxServiceInstrumentationTest;
 import org.lineageos.audiofx.util.TestMediaPlayer;
