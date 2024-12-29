@@ -31,7 +31,6 @@
             android:paddingStart="4dp"
             android:paddingEnd="4dp"
             android:text="@string/reverb"
-            android:textColor="@color/white"
             android:textSize="@dimen/reverb_switch_label_size" />
 
         <com.google.android.material.materialswitch.MaterialSwitch
